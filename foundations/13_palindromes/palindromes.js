@@ -1,4 +1,15 @@
-const palindromes = function () {
+const palindromes = function (string) {
+    const alphanumerical = "abcdefghijklmnopqrstuvwxyz012345789"
+
+    const cleanStr = string
+        .toLowerCase()
+        .split('')
+        .filter((character) => alphanumerical.includes(character))
+        .join('');
+
+    const reverseStr = cleanStr.split('').reverse().join('')
+
+    return cleanStr === reverseStr
 
 };
 
